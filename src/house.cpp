@@ -1,4 +1,4 @@
-#include "house.h"
+#include "house.hpp"
 
 void reshape(int w, int h) {}
 
