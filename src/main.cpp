@@ -7,7 +7,6 @@ int main(int argc, char **argv) {
     glutInitWindowSize(1280, 720);
     glutInitWindowPosition(0, 0);
     glutCreateWindow("2D House");
-//    glutDisplayFunc(test);
     glutDisplayFunc(display);
 
     my_init(1280, 720);
