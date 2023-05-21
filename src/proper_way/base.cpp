@@ -88,6 +88,24 @@ void draw(void) {
         drawTriangle();
     glPopMatrix();
 
+    // Front door
+    glColor3f(0.197059f, 0.164706f, 0.164706f);
+    glPushMatrix();
+        glTranslatef(170, 96, 0);
+        glScalef(20, 40, 1);
+        skewY(-8);
+        drawSquare();
+    glPopMatrix();
+
+    // Door knob
+    glColor3f(1.0f, 1.0f, 0.3f);
+    glPushMatrix();
+        glTranslatef(165, 96, 0);
+        glScalef(2, 2, 1);
+        skewY(-8);
+        drawCircle();
+    glPopMatrix();
+
     // Side of the house (lighter)
     glColor3f(1.0f, 1.0f, 1.0f);
         glPushMatrix();
