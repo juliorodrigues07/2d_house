@@ -62,15 +62,6 @@ void draw(void) {
     glLoadIdentity();
     glClear(GL_COLOR_BUFFER_BIT);
 
-    // Aqui entra seu código da casa 2D.
-    //Vocês só pode usar as funções de desenho:
-        // desenhaQuadrado, desenhaTriangulo, desenhaCirculo
-    // as transformações geométricas:
-        // glTranslatef, glRotatef, glScalef, skewX, skewY
-    // e as funções de cor:
-        // glColor3f
-    // Não desenhe nenhuma primitiva utilizando glBegin/glEnd diretamente aqui.
-
     // Front of the house (with shadow)
     glColor3f(0.5f, 0.5f, 0.5f);
     glPushMatrix();
@@ -108,10 +99,26 @@ void draw(void) {
 
     // Side of the house (lighter)
     glColor3f(1.0f, 1.0f, 1.0f);
-        glPushMatrix();
+    glPushMatrix();
         glTranslatef(300, 100, 0);
         glScalef(150, 50, 1);
         skewY(30);
+        drawSquare();
+    glPopMatrix();
+
+    // Windows
+    glColor3f(0.439216f, 0.858824f, 0.8f);
+    glPushMatrix();
+        glTranslatef(270, 95, 0);
+        glScalef(40, 20, 1);
+        skewY(20);
+        drawSquare();
+    glPopMatrix();
+
+    glPushMatrix();
+        glTranslatef(330, 107, 0);
+        glScalef(40, 20, 1);
+        skewY(20);
         drawSquare();
     glPopMatrix();
 
