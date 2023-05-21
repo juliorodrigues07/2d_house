@@ -25,7 +25,7 @@ void drawTriangle() {
 void drawCircle() {
 
     glBegin(GL_POLYGON);
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 80; i++)
             glVertex2f(cos(i), sin(i));
     glEnd();
 }
@@ -62,6 +62,15 @@ void draw(void) {
     glLoadIdentity();
     glClear(GL_COLOR_BUFFER_BIT);
 
+    // Chimney
+    glColor3f(0.197059f, 0.164706f, 0.164706f);
+    glPushMatrix();
+        glTranslatef(140, 168, 0);
+        glScalef(10, 40, 1);
+        skewY(20);
+        drawSquare();
+    glPopMatrix();
+
     // Front of the house (with shadow)
     glColor3f(0.5f, 0.5f, 0.5f);
     glPushMatrix();
@@ -77,6 +86,15 @@ void draw(void) {
         glRotatef(-18, 0, 0, 1);
         glScalef(100, 75, 1);
         drawTriangle();
+    glPopMatrix();
+
+    // Front circular window
+    glColor3f(0.5f, 0.0f, 1.0f);
+    glPushMatrix();
+        glTranslatef(170, 150, 0);
+        glScalef(8, 8, 1);
+        skewY(-5);
+        drawCircle();
     glPopMatrix();
 
     // Front door
@@ -106,7 +124,7 @@ void draw(void) {
         drawSquare();
     glPopMatrix();
 
-    // Windows
+    // Side windows
     glColor3f(0.439216f, 0.858824f, 0.8f);
     glPushMatrix();
         glTranslatef(270, 95, 0);
