@@ -18,12 +18,12 @@ Implementation of a 2D house model from scratch, utilizing OpenGL API (First pra
 
 # Compilation
 
-- Execute the following command to compile the source code (inside _src_ directory):
+- Execute the following command to compile the source code (inside _from_scratch_ or _proper_way_ directory):
 
       make
 
 # Execution
 
-- The command for executing the program is as it follows (inside _src_ directory):
+- The command for executing the program is as it follows (inside _from_scratch_ or _proper_way_ directory):
 
       make run
