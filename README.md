@@ -1,5 +1,5 @@
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://devdocs.io/cpp/)
-# 2D House
+# 2D House (v2.0)
 Implementation of a 2D house model from scratch, utilizing OpenGL API (First practical activity from Computer Graphics course - DCOMP - UFSJ).
 
 # Requirements
@@ -18,12 +18,12 @@ Implementation of a 2D house model from scratch, utilizing OpenGL API (First pra
 
 # Compilation
 
-- Execute the following command to compile the source code (inside _src_ directory):
+- Execute the following command to compile the source code (inside _from_scratch_ or _proper_way_ directory):
 
       make
 
 # Execution
 
-- The command for executing the program is as it follows (inside _src_ directory):
+- The command for executing the program is as it follows (inside _from_scratch_ or _proper_way_ directory):
 
       make run
