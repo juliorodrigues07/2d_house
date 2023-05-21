@@ -71,17 +71,49 @@ void draw(void) {
         // glColor3f
     // Não desenhe nenhuma primitiva utilizando glBegin/glEnd diretamente aqui.
 
+    // Front of the house (with shadow)
+    glColor3f(0.5f, 0.5f, 0.5f);
     glPushMatrix();
-        glTranslatef(100, 100, 0);
+        glTranslatef(175, 100, 0);
         glScalef(100, 50, 1);
-        skewX(30);
+        skewY(-30);
         drawSquare();
     glPopMatrix();
 
     glPushMatrix();
+        glTranslatef(176, 158, 0);
+        skewX(-20);
+        glRotatef(-18, 0, 0, 1);
+        glScalef(100, 75, 1);
+        drawTriangle();
+    glPopMatrix();
+
+    // Side of the house (lighter)
+    glColor3f(1.0f, 1.0f, 1.0f);
+        glPushMatrix();
         glTranslatef(300, 100, 0);
-        glScalef(10, 10, 1);
-        drawCircle();
+        glScalef(150, 50, 1);
+        skewY(30);
+        drawSquare();
+    glPopMatrix();
+
+    // Left portion of the roof (with shadow)
+    glColor3f(0.197059f, 0.164706f, 0.164706f);
+    glPushMatrix();
+        glTranslatef(149, 168, 0);
+        glRotatef(48, 0, 0, 1);
+        glScalef(80, 3, 1);
+        drawSquare();
+    glPopMatrix();
+
+    // Right portion of the roof (lighter)
+    glColor3f(0.347059f, 0.164706f, 0.164706f);
+    glPushMatrix();
+        glTranslatef(279, 169, 0);
+        skewX(-20);
+        glRotatef(10, 0, 0, 1);
+        glScalef(180, 90, 1);
+        drawSquare();
     glPopMatrix();
 
     glutSwapBuffers();
