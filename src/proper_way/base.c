@@ -1,4 +1,4 @@
-#include "base.hpp"
+#include "base.h"
 
 GLfloat windowWidth;
 GLfloat windowHeight;

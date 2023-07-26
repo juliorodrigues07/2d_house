@@ -1,8 +1,8 @@
 all: base.o
-	g++ base.o main.cpp -o house -lGL -lGLU -lglut -lm
+	gcc base.o main.c -o house -lGL -lGLU -lglut -lm
 
-base.o: base.hpp
-	g++ -c base.cpp
+base.o: base.h
+	gcc -c base.c
 
 clean:
 	rm -rf *.o

@@ -1,4 +1,4 @@
-#include "house.hpp"
+#include "house.h"
 
 int main(int argc, char **argv) {
 
